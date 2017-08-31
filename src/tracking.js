@@ -123,7 +123,7 @@
    * @param {object} opt_options Optional configuration to the tracker.
    */
   tracking.track = function(element, tracker, opt_options) {
-    element = tracking.one(element);
+    element = tracking.one(element, opt_options.opt_element);
     if (!element) {
       throw new Error('Element not found, try a different element or selector.');
     }
